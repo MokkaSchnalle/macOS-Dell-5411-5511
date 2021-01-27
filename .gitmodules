@@ -1,0 +1,6 @@
+[submodule "Tools/MountEFI"]
+	path = Tools/MountEFI
+	url = https://github.com/corpnewt/MountEFI
+[submodule "Tools/CPUFriendFriend"]
+	path = Tools/CPUFriendFriend
+	url = https://github.com/corpnewt/CPUFriendFriend
