@@ -1,10 +1,11 @@
-# Dell Latitude 5411 or 5511 with macOS Big Sur
-A collection of all files needed to run Big Sur on a Dell 5411 or 5511.
+# Dell Latitude 5411 or 5511 with macOS Monterey
+A collection of all files needed to run Monterey on a Dell 5411 or 5511.
+It will also work with Catalina or Big Sur (checkout older releases)
 
 ![Screenshot](img/desktop.png)
 
 ## 🔍 Overview
-This is more of a compilation of information and configs from various repositories and forums than a place where real development happens. This repository should contain everything needed to get Big Sur up and running on your Dell Latitude 5411 or 5511 laptop.
+This is more of a compilation of information and configs from various repositories and forums than a place where real development happens. This repository should contain everything needed to get Monterey up and running on your Dell Latitude 5411 or 5511 laptop.
 
 ## ✔️ Status
 | Hardware | Model | Status | Comments |
@@ -96,7 +97,7 @@ Reboot your computer and check.
 Grab a free USB stick with at least 16GiB and format it with HFS+ file system and GUID table.
 
 Download a legal copy of macOS from the App Store using a real Mac and create a bootable installation stick:
-`sudo /Applications/Install\ macOS\ Big\ Sur.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
+`sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/MyVolume`
 Rename MyVolume to your USB stick name or drag the Volume into the Terminal window.
 
 Now use the tool `MountEFI` to mount the EFI volume on the USB stick.
