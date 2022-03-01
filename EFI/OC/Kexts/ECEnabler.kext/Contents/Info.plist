@@ -3,27 +3,27 @@
 <plist version="1.0">
 <dict>
 	<key>BuildMachineOSBuild</key>
-	<string>19H1417</string>
+	<string>19H1217</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
-	<string>BlueToolFixup</string>
+	<string>ECEnabler</string>
 	<key>CFBundleIdentifier</key>
-	<string>as.acidanthera.BlueToolFixup</string>
+	<string>com.1Revenger1.ECEnabler</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>BlueToolFixup</string>
+	<string>ECEnabler</string>
 	<key>CFBundlePackageType</key>
 	<string>KEXT</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.6.1</string>
+	<string>1.0.2</string>
 	<key>CFBundleSupportedPlatforms</key>
 	<array>
 		<string>MacOSX</string>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>2.6.1</string>
+	<string>1.0.2</string>
 	<key>DTCompiler</key>
 	<string>com.apple.compilers.llvm.clang.1_0</string>
 	<key>DTPlatformBuild</key>
@@ -42,14 +42,14 @@
 	<string>12B45b</string>
 	<key>IOKitPersonalities</key>
 	<dict>
-		<key>BlueToolFixup</key>
+		<key>com.1Revenger1.ECEnabler</key>
 		<dict>
 			<key>CFBundleIdentifier</key>
-			<string>as.acidanthera.BlueToolFixup</string>
+			<string>com.1Revenger1.ECEnabler</string>
 			<key>IOClass</key>
-			<string>BlueToolFixup</string>
-			<key>IOMatchCategory</key>
-			<string>BlueToolFixup</string>
+			<string>ECEnabler</string>
+			<key>IOClassCategory</key>
+			<string>ECEnabler</string>
 			<key>IOProviderClass</key>
 			<string>IOResources</string>
 			<key>IOResourceMatch</key>
@@ -57,23 +57,23 @@
 		</dict>
 	</dict>
 	<key>LSMinimumSystemVersion</key>
-	<string>10.8</string>
+	<string>10.7</string>
 	<key>OSBundleLibraries</key>
 	<dict>
 		<key>as.vit9696.Lilu</key>
-		<string>1.4.7</string>
+		<string>1.4.9</string>
 		<key>com.apple.kpi.bsd</key>
-		<string>12.0.0</string>
+		<string>11.0.0</string>
 		<key>com.apple.kpi.dsep</key>
-		<string>12.0.0</string>
+		<string>11.0.0</string>
 		<key>com.apple.kpi.iokit</key>
-		<string>12.0.0</string>
+		<string>11.0.0</string>
 		<key>com.apple.kpi.libkern</key>
-		<string>12.0.0</string>
+		<string>11.0.0</string>
 		<key>com.apple.kpi.mach</key>
-		<string>12.0.0</string>
+		<string>11.0.0</string>
 		<key>com.apple.kpi.unsupported</key>
-		<string>12.0.0</string>
+		<string>11.0.0</string>
 	</dict>
 	<key>OSBundleRequired</key>
 	<string>Root</string>
