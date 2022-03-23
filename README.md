@@ -15,7 +15,7 @@ This is more of a compilation of information and configs from various repositori
 | **Internal Display** | 1920x1080@60Hz | ✅ Working | Internal eDP display fully working including Backlight control. |
 | **External Display(s)** | DP 1.4, HDMI 2.0 via LSPCON | ✅ Working | 3840x1600@85Hz via Thunderbolt/DP and 3840x2160@60Hz via HDMI tested. 4 displays (Internal + 3 external, 2 via Thunderbolt and 1 HDMI) simultaneously working fine. If using a Thunderbolt dock for multiple displays, you can only connect one display to the dock connectors. For the second display, you have to use an additional USB-C display adapter connected to the "Passthrough"/Daisy Chain Thunderbolt port of your dock because macOS does not support MST.  |
 | **SSD** | Micron 2300 NVMe 512GB | ✅ Working |
-| **Trackpad** | I2C ALPS ???? (Named Dell09C0) | 🔶 Partially | Working with full gesture support (5 fingers) but the hardware buttons are not working. You can use left/right click with touch tap (change in settings). |
+| **Trackpad** | I2C ALPS ???? (Named Dell09C0) | ✅ Working | Working with full gesture support (5 fingers) ~~but the hardware buttons are not working. You can use left/right click with touch tap (change in settings).~~ |
 | **Wi-Fi/ BT** | Dell DW1560 | ✅ Working | The stock Intel AX Wi-Fi 6 card needs to be swapped out to a compatible card. |
 | **LAN** | Intel I219-LM | ✅ Working | |
 | **Thunderbolt/ USB-C** | Intel JHL7540 / Titan Ridge 2C 2018 | ✅ Working | USB-C charging works. Thunderbolt and USB-C devices are working. Tested with a Dell WD19TB Thunderbolt Dock and an USB-C iPad. Hotplugging of USB-C displays or USB-C docks with a display attached to it, is buggy sometimes. But USB-C to HDMI or (m)DP adapters are working fine. |
@@ -23,17 +23,17 @@ This is more of a compilation of information and configs from various repositori
 | **Internal Speakers** | Realtek ALC3204 | ✅ Working | Fully working including Mac boot chime |
 | **Internal Microphone array** | | ✅ Working |
 | **Headphone Jack** | | ✅ Working | Works, including automatic switch to headphone if plugged in. |
-| **Webcam** || ✅ Working |
+| **Webcam** | | ✅ Working |
 | **SDXC reader** | Realtek RTS525A | ✅ Working |
-| **Fingerprint reader** || ❌ Not working | Will never work, because of MacBooks with TouchID and T2 chip and proprietary Windows drivers for Dell. |
+| **Fingerprint reader** | | ❌ Not working | Will never work, because of MacBooks with TouchID and T2 chip and proprietary Windows drivers for Dell. |
 
 | Features | Status | Comments |
 | ------------- | ------------- | ------------- |
 | **Sleep** | ✅ Working |
 | **Lid Open/Close** | ✅ Working | Goes to Sleep when no external display connected and wakes up.
 | **Sidecar** | ✅ Working |
-| **iMessage and App Store** | ✅ Working | Just use or valid SMBIOS, S/N, MLB and MAC-Address. |
-| **Handoff** | ✅ Working | Tested with iPhone 11 Pro Max and iPad Pro 12,9" |
+| **iMessage and App Store** | ✅ Working | Just use a valid SMBIOS, S/N, MLB and MAC-Address. Do not use the random data in my repo as these may be used by others! |
+| **Handoff** | ✅ Working | Tested with iPhone 12 Pro Max, iPhone 13 Pro Max, iPad Pro 12,9" and second Hackintosh |
 | **Sidecar** | ✅ Working | Tested with iPad Pro 12,9" |
 | **Watch Unlock** | ✅ Working | ...most of the time. Tested with Apple Watch series 3 |
 | **FileVault 2** | 🔶 Partially | Encryption itself is working fine but generates a huge boot delay (30-60 seconds) until asking for the FileVault password. I think this is an OpenCore bug. This occurred already on the macOS Catalina Beta and was fixed later. |
@@ -41,12 +41,12 @@ This is more of a compilation of information and configs from various repositori
 ## 🗒️ To-Do
 | Features | Comments | Done |
 | ------------- | ------------- | ------------- |
-| **Trackpad GPIO fix** | The trackpad is currently configured to work in polling mode because the GPIO Interrupt mode generates very high CPU load | ❌ No |
-| **Ghost display on HDMI** | HDMI display stays online after disconnection. Gone after updating the display configuration (e.g. connecting new display or change resolution) | ❌ No |
 | **HDMI black screen after wakeup** | No output on the HDMI port after sleep. Works fine again after replugging any display cable. | ❌ No |
-| ~~**Multiple displays via Thunderbolt Dock**~~ | ~~Not done yet because of missing Thunderbolt Dock~~ Tested with a Dell WD19TB Thunderbolt Dock. I made some adjustments to the WEG framebuffer patches to enable two displays via Thunderbolt. | ✅ Yes |
 | **Battery reading** | Buggy or not updating from time to time when external displays connected | ❌ No |
-| ~~**Thunderbolt fix**~~ | ~~Flashing Apple's Original Thunderbolt Firmware to the Titan Ridge 2C 2018 SPI EEPROM~~ (Not needed, as everything works fine) |  |
+| **Random Kernel Panics** | Kernel panics around once a month after waking from sleep | ❌ No |
+| ~~**Trackpad GPIO fix**~~ | ~~The trackpad is currently configured to work in polling mode because the GPIO Interrupt mode generates very high CPU load~~ (Not needed because of latest VoodooI2C supporting hardware buttons | ✅ Yes |
+| ~~**Ghost display on HDMI**~~ | ~~HDMI display stays online after disconnection. Gone after updating the display configuration (e.g. connecting new display or change resolution)~~ Fixed with latest WhateverGreen.kext | ✅ Yes |
+| ~~**Multiple displays via Thunderbolt Dock**~~ | ~~Not done yet because of missing Thunderbolt Dock~~ Tested with a Dell WD19TB Thunderbolt Dock. I made some adjustments to the WEG framebuffer patches to enable two displays via Thunderbolt. | ✅ Yes |
 | ~~**Disable CFG Lock**~~ | ~~Flashing a modded UEFI/BIOS because this option is not listed in the Dell Utility and changes via GRUB setup-var are not working because the EFI writable flag is not set~~ (see section [Adjust UEFI variables](#adjust-uefi-variables-to-enable-4k60hz-and-disable-cfg-lock)) | ✅ Yes |
 
 
